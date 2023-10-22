@@ -146,7 +146,7 @@ $movies = [
 
 $age = readline("Введите ваш возраст: ");
 
-if (!is_numeric($age))
+if (!checkAge($age))
 {
     echo "Вы ввели не подходяшее значение\n";
 }

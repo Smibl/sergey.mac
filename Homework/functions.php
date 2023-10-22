@@ -1,5 +1,8 @@
 <?php
-
+function checkAge($age)
+{
+    return is_numeric($age) && (int) $age <99 && (int) $age >= 0;
+}
 function printMovies($movies)
 {
     echo "Вашему вниманию список фильмов:\n";
@@ -7,11 +10,10 @@ function printMovies($movies)
     foreach ($movies as $movie)
     {
         $movieId ++;
-        echo formatMovies($movieId, $movie);
+        echo formatMovie($movieId, $movie);
     }
 }
-
-function formatMovies($movieId, array $movie)
+function formatMovie($movieId, array $movie)
 {
     return "$movieId. $movie[title] ($movie[release_year]), $movie[age_restriction]+. Rating - $movie[rating]\n";
 }
