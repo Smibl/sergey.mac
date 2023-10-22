@@ -1,2 +1,3 @@
 <?php
-    echo 'Привет, Женя!';
+    echo "Did you watch \"Dune\"?";
+?>
