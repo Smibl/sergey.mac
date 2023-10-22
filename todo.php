@@ -1,4 +1,8 @@
 <?php
+/** @var array $toodayTasks */
+require "./Todo/todos-data.php";
+require "./Todo/todos-functions.php";
+require "functions.php";
 
 //function sum(...$numbers)
 //{
@@ -17,38 +21,8 @@
 //$values = [1,24,51,125];
 //echo sum (...$values);
 
-$toodayTasks = [
-    [
-        "id" => 1,
-        "name" => "Сходить в магазин",
-        "completed" => false
-    ],
-    [
-        "id" => 2,
-        "name" => "Погулять с собакой",
-        "completed" => true
-    ],
-    [
-        "id" => 3,
-        "name" => "Почитать книгу",
-        "completed" => false
-    ],
-    [
-        "id" => 4,
-        "name" => "Убраться дома",
-        "completed" => false
-    ]
-];
+$title = "Что мне нужно сделать сегодня:";
 
-function printTodos($Todos)
-{
-    $result = "Что мне нужно сделать сегодня:\n";
-    foreach ($Todos as $todo)
-    {
-        $status = $todo["completed"] ? "[X]" : "[ ]";
-        $result = "$result $status $todo[id]. $todo[name]\n";
-    }
-    return $result;
-}
 
-echo printTodos($toodayTasks);
+printMessage($title);
+printTodos($toodayTasks);
