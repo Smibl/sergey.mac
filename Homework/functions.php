@@ -3,14 +3,16 @@ function checkAge($age)
 {
     return is_numeric($age) && (int) $age <99 && (int) $age >= 0;
 }
-function printMovies($movies)
+function printMovies(array $movies)
 {
     echo "Вашему вниманию список фильмов:\n";
-    $movieId = 0;
-    foreach ($movies as $movie)
+//    for ($i=0; $i<count($movies); $i++)
+//    {
+//        echo formatMovie($i, $movies[$i]);
+//    }
+    foreach ($movies as $id=>$movie)
     {
-        $movieId ++;
-        echo formatMovie($movieId, $movie);
+        echo formatMovie($id, $movie);
     }
 }
 function formatMovie($movieId, array $movie)
