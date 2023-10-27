@@ -1,15 +1,16 @@
 <?php
 
 $from = 'FriendsClub';
-$to = '';
-$text = '';
+$to = '79114867178';
+$text = 'Здравствуйте, вы позвонили в службу подбора персонала SPAR, но мы не смогли принять ваш звонок, перейдите по ссылке в чат-бот SPAR и заполните анкету на желаемую должность, мы свяжемся с Вами!
+https://rabotavspar.bitrix24.site/';
 
 $postData = [
     'messages' => [
         [
-        'from' => 'FriendsClub',
-        'to' => '79114867178',
-        'text' => 'Testing message'
+        'from' => $from,
+        'to' => $to,
+        'text' => $text
         ]
     ]
 ];
@@ -36,4 +37,4 @@ curl_close($ch);
 
 var_dump($server_output);
 
-?>
+
